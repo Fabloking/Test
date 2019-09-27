@@ -1,25 +1,33 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Boutique
-        </p>
-      </header>
-      <head>
-    <title>Socket.IO chat</title>
-      </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-  </body>
-    </div>
-  );
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <Header/>
+            <Content/>
+         </div>
+      );
+   }
 }
-
+class Header extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Header</h1>
+         </div>
+      );
+   }
+}
+class Content extends React.Component {
+   render() {
+      return (
+         <div>
+            <h2>Content</h2>
+            <p>The content text!!!</p>
+         </div>
+      );
+   }
+}
 export default App;
